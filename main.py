@@ -113,11 +113,11 @@ class House(Model):
 # ------------- INITIAL VARIABLES ------------- #
 # --------------------------------------------- #
 
-WIDTH = 20
-HEIGHT = 25
-NUM_AGENTS = 20
+WIDTH = 25
+HEIGHT = 15
+NUM_AGENTS = 24
 DIRT_PERCENTAGE = 0.4
-MAX_ITER = 200
+MAX_ITER = 150
 
 # --------------------------------------------- #
 # --------- CREATION AND RUN OF MODEL --------- #
@@ -154,13 +154,13 @@ if finished:
 else:
     print("\nCOULD NOT CLEAN THE WHOLE HOUSE")
 
-print("STEPS EXECUTED: ", model.counter)
-print("TOTAL MOVEMENTS BY AGENTS: ", totalMovements)
-print("SPACES TO CLEAN: ", int(startDirty))
-print("TOTAL SPACES CLEANED: ", totalCellsCleaned)
-print("REMAINING SPACES TO CLEAN: ", int(totalDirty))
+print("STEPS EXECUTED: \t\t", model.counter)
+print("TOTAL MOVEMENTS BY AGENTS: \t", totalMovements)
+print("SPACES TO CLEAN: \t\t", int(startDirty))
+print("TOTAL SPACES CLEANED: \t\t", totalCellsCleaned)
+print("REMAINING SPACES TO CLEAN: \t", int(totalDirty))
 out = percetageClean * 100
-print("PERCENTAGE OF CLEAN SPACE:", "{:.2f}".format(out), "%")
+print("PERCENTAGE OF CLEAN SPACE: \t", "{:.2f}".format(out), "%")
 
 # --------------------------------------------- #
 # ------ GRAPHIC REPRESENTATION OF MODEL ------ #
